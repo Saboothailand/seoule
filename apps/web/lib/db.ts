@@ -1,5 +1,10 @@
-import { db } from '@seoule/database';
-export { db };
+import { drizzle } from 'drizzle-orm/postgres-js';
+import postgres from 'postgres';
+import * as schema from '../../../packages/database/schema';
+
+const connectionString = process.env.DATABASE_URL!;
+const client = postgres(connectionString);
+export const db = drizzle(client, { schema });
 
 
 

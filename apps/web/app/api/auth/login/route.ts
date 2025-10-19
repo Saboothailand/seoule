@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { loginUser } from '@/lib/auth';
-import { loginSchema } from '@seoule/database/schema';
+import { loginSchema } from '../../../../../packages/database/schema';
 
 export async function POST(request: NextRequest) {
   try {

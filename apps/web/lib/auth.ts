@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { db } from '@/lib/db';
-import { users, sessions, type User, type Session } from '@seoule/database/schema';
+import { users, sessions, type User, type Session } from '../../../packages/database/schema';
 import { eq, and, gt } from 'drizzle-orm';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';

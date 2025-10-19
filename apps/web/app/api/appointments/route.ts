@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { appointments, members, staffs, services } from '@seoule/database/schema';
-import { createAppointmentSchema } from '@seoule/database/schema';
+import { appointments, members, staffs, services } from '../../../../packages/database/schema';
+import { createAppointmentSchema } from '../../../../packages/database/schema';
 import { eq, desc, and, gte, lte } from 'drizzle-orm';
 
 export async function GET(request: NextRequest) {
